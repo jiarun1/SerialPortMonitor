@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>986</width>
+    <height>662</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainwindow{
+background-color: rgb(243, 243, 243);
+}
+</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedKingdom"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_16">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>335</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>335</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QScrollArea{
+border: 0px solid;
+border-right-width: 1px;
+border-right-color: #dcdbdc;
+background-color: #f5f5f7;
+}
+
+QScrollBar:vertical {
+border: none;
+background: #f5f5f7;
+width: 10px;
+margin: 0px 0 0px 0;
+}
+
+QScrollBar::handle:vertical {
+background: Gainsboro;
+min-height: 20px;
+border-radius: 5px;
+border: none;
+}
+QScrollBar::add-line:vertical {
+border: 0px solid grey;
+background: #32CC99;
+height: 0px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical {
+border: 0px solid grey;
+background: #32CC99;
+height: 0px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+width: 0px;
+height: 0px;
+}</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>315</width>
+         <height>800</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>315</width>
+         <height>800</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>315</width>
+         <height>800</height>
+        </size>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>2</y>
+          <width>306</width>
+          <height>787</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="BasicSetting">
+           <item>
+            <layout class="QHBoxLayout" name="Port">
+             <item>
+              <widget class="QLabel" name="Port_Label">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Port:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Port_Refresh">
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border: none
+</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="../Icons/Icons.qrc">
+                 <normaloff>:/Spin_1.png</normaloff>:/Spin_1.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="Port_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="Baudrate">
+             <item>
+              <widget class="QLabel" name="BaudRate_Name">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>BondRate:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="BaudRate_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="Databits">
+             <item>
+              <widget class="QLabel" name="DataBits_Label">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Data bits:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="DataBits_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="Parity">
+             <item>
+              <widget class="QLabel" name="Parity_label">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Paritys:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_4">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="Parity_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="Stopbits">
+             <item>
+              <widget class="QLabel" name="StopBits_Label">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Stop bits:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_5">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="StopBits_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="Extra">
+             <item>
+              <widget class="QPushButton" name="MoreSetting_PushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+
+}
+QPushButton:hover{
+
+}
+</string>
+               </property>
+               <property name="text">
+                <string>More Settings</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="PortOpenClose_PushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Open Port</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line_2">
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+            </font>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="ReceiveArea">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="ReceiveAreaTitle_label">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>10</pointsize>
+               <bold>true</bold>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="text">
+              <string>Receive Area Settings</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="ReceiveAndSave_CheckBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>10</pointsize>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="text">
+              <string>Receive and Save</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="HexDisplay_CheckBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>10</pointsize>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="text">
+              <string>Hex Display</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="ReceiveDisplay_Checkbox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>10</pointsize>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="text">
+              <string>Receive Display</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="AutoFrameBreak">
+             <item>
+              <widget class="QCheckBox" name="AutoFrameBreak_CheckBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Auto Frame Break</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="AutoFrameBreak_LineEdit">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	border-width:0;
+	border-style:outset;
+	
+	selection-background-color: rgb(85, 85, 255)
+	
+}
+
+QLineEdit:hover
+{
+	border: 1px solid blue
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="ReceiveScript">
+             <item>
+              <widget class="QCheckBox" name="ReceiveScript_CheckBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Receive Script</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="ReceiveScript_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="DataAct">
+             <item>
+              <widget class="QPushButton" name="SaveData_PushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+
+}
+QPushButton:hover{
+
+}
+</string>
+               </property>
+               <property name="text">
+                <string>Save Data</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearData_PushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+
+}
+QPushButton:hover{
+
+}
+</string>
+               </property>
+               <property name="text">
+                <string>Clear Data</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line">
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+            </font>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="SendArea">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="SendAreaTitle_Label">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>10</pointsize>
+               <bold>true</bold>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="text">
+              <string>Send Area Settings</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="SendFile_CheckBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>10</pointsize>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="text">
+              <string>Send File</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="HexSend_CheckBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>10</pointsize>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="text">
+              <string>Hex Send</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="SendScript">
+             <item>
+              <widget class="QCheckBox" name="SendScript_CheckBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Send Script</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_9">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="SendScript_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="TimeDelivery">
+             <item>
+              <widget class="QCheckBox" name="TimeDelivery_CheckBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Timed Delivery(ms)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_8">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="TimeDelivery_LineEdit">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	border-width:0;
+	border-style:outset;
+	
+	selection-background-color: rgb(85, 85, 255)
+	
+}
+
+QLineEdit:hover
+{
+	border: 1px solid blue
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="Choose">
+             <item>
+              <widget class="QCheckBox" name="DTR_CheckBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>80</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="locale">
+                <locale language="English" country="UnitedKingdom"/>
+               </property>
+               <property name="text">
+                <string>DTR</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="RTS_CheckBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>80</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>RTS</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_14">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line_3">
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+            </font>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="ExtraSetting">
+           <item>
+            <layout class="QHBoxLayout" name="LineBreak">
+             <property name="spacing">
+              <number>8</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="LineBreak_Label">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="text">
+                <string>Line Break</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_10">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="LineBreak_Combo">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+background:rgba(255,255,255,255);
+border-radius:4px;
+border:1px solid rgba(217,217,217,255);
+}
+QComboBox::drop-down {
+    border: 0px solid rgb(255,255,255);
+    subcontrol-origin:padding;
+    padding-right: 10px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/downCommbox.png);
+    width:16px;
+    height:16px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="ShowSendingString">
+             <item>
+              <widget class="QCheckBox" name="ShowSendingString_CheckBox">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Show Sending String</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_15">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="AutoClearSendArea">
+             <item>
+              <widget class="QCheckBox" name="AutoClearSendArea_Check">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Auto Clear Sending Area</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_11">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="ShowTimeStamp">
+             <item>
+              <widget class="QCheckBox" name="ShowTimeStamp_Check">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Show Time Stamp</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_16">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="20,2,1">
+      <property name="spacing">
+       <number>7</number>
+      </property>
+      <item>
+       <widget class="QTextBrowser" name="DataDisplay_TextBrowser">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>10</pointsize>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+    
+     border:1px solid  rgb(255, 255, 255);
+     border-radius:2px;
+     color: rgb(0, 0, 0);
+     background-color:  rgb(255, 255, 255);
+}
+ 
+QPushButton:pressed
+{
+    
+     border:1px solid rgb(90, 90, 137,0.6);
+     border-radius:2px;
+     color: rgb(255, 255, 255);
+     background-color: rgb(90, 90, 137,0.6);
+}
+ 
+QPushButton:hover
+{ 
+     border:1px solid rgb(90, 90, 137,0.6);
+     border-radius:2px;
+     color: rgb(255, 255, 255);
+     background-color: rgb(90, 90, 137,0.6);
+}
+
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="SendData">
+        <item>
+         <widget class="QTextEdit" name="SendData_TextEdit">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="SendData_PushButton">
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+
+}
+QPushButton:hover{
+
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="DataCount">
+        <item>
+         <widget class="QLabel" name="SendNum_Label">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Send:     </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_12">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="ReceiveNum_Label">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Receive:    </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_13">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="CountReset_PushButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+
+}
+QPushButton:hover{
+
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Reset Counter</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>986</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Save"/>
+   <addaction name="separator"/>
+   <addaction name="action_GraphMode"/>
+   <addaction name="action_ATMode"/>
+  </widget>
+  <action name="action_GraphMode">
+   <property name="icon">
+    <iconset resource="../Icons_2.qrc">
+     <normaloff>:/Icons/Graph_2.png</normaloff>:/Icons/Graph_2.png</iconset>
+   </property>
+   <property name="text">
+    <string>GraphMode</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="../Icons/Icons.qrc">
+     <normaloff>:/Save_1.png</normaloff>:/Save_1.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="action_ATMode">
+   <property name="text">
+    <string>ATMode</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../Icons_2.qrc"/>
+  <include location="../Icons/Icons.qrc"/>
+  <include location="../Icons/Icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
